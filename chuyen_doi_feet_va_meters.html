@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>
+        <label>from feet to meters:</label>
+        <input type="number" id="inputFeet"  placeholder="Enter feet"
+                onchange="feetToMeters(this.value)";
+                oninput="feetToMeters(this.value)";>
+        <p>Meters: <span id="outputMeters"></span> meters</p>
+    </p>
+    <p>
+        <label>from meters to feet:</label>
+        <input type="number" id="inputMeters" placeholder="Enter meters"
+                onchange="metersToFeet(this.value)";
+                oninput="metersToFeet(this.value)";>
+        <p>Feet: <span id="outputFeet"></span> feet</p>
+    </p>
+    <script>
+        function feetToMeters(feet){
+            document.getElementById("outputMeters").innerHTML = (feet * 0.305);
+        }
+        function metersToFeet(meters){
+            document.getElementById("outputFeet").innerHTML = (meters*3.279);
+        }
+    </script>
+</body>
+</html>
